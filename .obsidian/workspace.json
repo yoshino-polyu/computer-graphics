@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2dd7d95bdbc621e5",
+        "id": "a696f326028ed7b6",
         "type": "tabs",
         "children": [
           {
-            "id": "bfffd0f91bc121ae",
+            "id": "4aaedfc6ef55dedb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 280.5
   },
   "right": {
     "id": "df4c6a5b64135515",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Viewing.md",
+                "file": "reading materials/TRANSFORMATIONS BETWEEN LOCAL, WORLD AND CAMERA SPACES.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Viewing"
+              "title": "Backlinks for TRANSFORMATIONS BETWEEN LOCAL, WORLD AND CAMERA SPACES"
             }
           },
           {
@@ -145,12 +145,12 @@
               "title": "Outline of Viewing"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -162,10 +162,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bfffd0f91bc121ae",
+  "active": "4aaedfc6ef55dedb",
   "lastOpenFiles": [
-    "images/Pasted image 20241124234127.png",
+    "reading materials/TRANSFORMATIONS BETWEEN LOCAL, WORLD AND CAMERA SPACES.pdf",
+    "reading materials/window n clip in 2D.pdf",
+    "reading materials/Window to Viewport Mapping.pdf",
+    "Viewing.md",
+    "images/Pasted image 20241128190640.png",
+    "images/Pasted image 20241128190459.png",
+    "images/Pasted image 20241128190126.png",
+    "images/Pasted image 20241128185418.png",
+    "images/Pasted image 20241128184657.png",
+    "README.md",
     "images/Pasted image 20241124224201.png",
-    "Viewing.md"
+    "images/Pasted image 20241128170119.png",
+    "images/Pasted image 20241128165413.png",
+    "images/Pasted image 20241128165201.png",
+    "images/Pasted image 20241128165042.png",
+    "security records.md",
+    "images/TRANSFORMATIONS BETWEEN LOCAL, WORLD AND CAMERA SPACES.pdf",
+    "reading materials/lec03-viewing.pdf",
+    "reading materials/Kouichi Matsuda, Rodger Lea - WebGL Programming Guide_ Interactive 3D Graphics Programming with WebGL-Addison-Wesley Professional (2013).pdf"
   ]
 }
