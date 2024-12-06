@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4aaedfc6ef55dedb",
+            "id": "3e40d104f959aafe",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "reading materials/lec06-texturemapping.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "lec06-texturemapping"
+            }
+          },
+          {
+            "id": "7ee35c43470d6bec",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -139,10 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Viewing.md"
+                "file": "reading materials/lec06-texturemapping.pdf"
               },
               "icon": "lucide-list",
-              "title": "Outline of Viewing"
+              "title": "Outline of lec06-texturemapping"
             }
           }
         ],
@@ -162,26 +174,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4aaedfc6ef55dedb",
+  "active": "bc5a83c0af26fe03",
   "lastOpenFiles": [
-    "reading materials/TRANSFORMATIONS BETWEEN LOCAL, WORLD AND CAMERA SPACES.pdf",
-    "reading materials/window n clip in 2D.pdf",
-    "reading materials/Window to Viewport Mapping.pdf",
+    "exam/~$_cheet.docx",
+    "exam/cg_cheet.docx",
+    "exam",
+    "New folder",
     "Viewing.md",
-    "images/Pasted image 20241128190640.png",
-    "images/Pasted image 20241128190459.png",
-    "images/Pasted image 20241128190126.png",
-    "images/Pasted image 20241128185418.png",
-    "images/Pasted image 20241128184657.png",
-    "README.md",
-    "images/Pasted image 20241124224201.png",
-    "images/Pasted image 20241128170119.png",
-    "images/Pasted image 20241128165413.png",
-    "images/Pasted image 20241128165201.png",
-    "images/Pasted image 20241128165042.png",
-    "security records.md",
-    "images/TRANSFORMATIONS BETWEEN LOCAL, WORLD AND CAMERA SPACES.pdf",
+    "reading materials/lec06-texturemapping.pdf",
+    "images/Pasted image 20241206224923.png",
+    "images/Pasted image 20241206224442.png",
+    "reading materials/lec07-light.pdf",
+    "reading materials/Texture Mapping.pdf",
+    "reading materials/lec05-dataflow.pdf",
+    "reading materials/lec04-shaders.pdf",
+    "images/Pasted image 20241206211553.png",
+    "reading materials/lec02-gpu.pdf",
     "reading materials/lec03-viewing.pdf",
-    "reading materials/Kouichi Matsuda, Rodger Lea - WebGL Programming Guide_ Interactive 3D Graphics Programming with WebGL-Addison-Wesley Professional (2013).pdf"
+    "images/Pasted image 20241206182730.png",
+    "images/Pasted image 20241206182013.png",
+    "images/Pasted image 20241206181953.png",
+    "images/Pasted image 20241206181202.png",
+    "images/Pasted image 20241206180936.png",
+    "images/Pasted image 20241206174648.png",
+    "images/Pasted image 20241206172500.png",
+    "README.md",
+    "security records.md"
   ]
 }

@@ -10,14 +10,17 @@ projection matrix (选择投影)选择透视投影或者正交投影
 view matrix (定义 camera 所在的位置和看的方向)
 
 
-
-
-
 Translate and Scale:
 ![[Pasted image 20241124234127.png]]
 
 # WebGL
 a WebGL program = a JS program executing in conjunction with shader programs.
+The majority of the WebGL API is 
+- about setting up state to supply data to our GLSL (GL Shader Language) programs.
+- just a rasterizer
+WebGL Shader Model:
+![[Pasted image 20241206144938.png]]
+VBOs: Vertex Buffer Objects = Store positions, normals, indices
 
 4 ways a shader can receive data:
 1. Attributes and Buffers
@@ -31,13 +34,18 @@ WebGL only cares about 2 things: clip space coordinates and colors.
 ![[Pasted image 20241125115342.png]]
 Clip space in `x` goes from -1 to +1. That means 0 is in the center and positive values will be to the right of that.
 
-
-The majority of the WebGL API is 
-- about setting up state to supply data to our GLSL (GL Shader Language) programs.
-- just a rasterizer
-
-
 bind points = internal global variables inside WebGL. bind a resource (e.g., position buffer) to a bind point; functions refer to the resource through the bind point.
+`gl_Position` and `gl_FragColor` are defined in GLSL. 
+## Vertex shader
+- Per vertex normal, texture, lighting, color. 
+- Responsible for all vertex coordinate transformations; Determine final vertex position. 
+
+
+## Fragment shader
+ - operates on each pixel
+ - compute final color of each pixel
+ - performs texture lookup
+ - discards fragments; sets fragment color.
 
 
 ## Buffer
@@ -88,6 +96,9 @@ view (eye) space = position in local camera space
 ## clip space
 clip space 又叫做 Projection Space.
 coordinates in clip space are called window coordinates.
+
+Normalized Device Coordinates (NDC): This is a coordinate system used in the pipeline of rendering 3D graphics. NDCs are a standardized way to represent coordinates so that they are **device-independent**. Coordinates in this system are typically defined within a range (like 1 to 1 for both x and y).
+
 clip space = what you get when you apply projection matrix.
 Orthographic (正交) projection & Perspective (透视) projection. 
 Clip space coordinates always go from -1 to +1 no matter what size your canvas is. clipping window is used to select the part of the scene that is to be displayed. 
@@ -99,6 +110,10 @@ Brute Force:
 ![[Pasted image 20241128190459.png]]
 ![[Pasted image 20241128190640.png]]
 problems of Brute Force: calc line intersections is computationally expensive
+
+### Polygon Clipping
+Sutherland-Hodgman: 
+![[Pasted image 20241205231654.png]]
 
 
 ## screen space
@@ -112,9 +127,79 @@ Viewport: An area on a display device to which a window is mapped.
 ![[Pasted image 20241128185418.png]]
 
 
+## homogeneous coordinates
+property of homogeneous coordinates:
+![[Pasted image 20241205235835.png]]
 
-## Vertex shader
-A vertex shader's job is to compute vertex positions. Vertex shader provides the clip space coordinates.
+## Projections
 
-## Fragment shader
- A fragment shader's job is to compute a color for each pixel of the primitive currently being drawn. Fragment shader provides the color.
+边缘不直接投影，边缘通过插值填充（Edges are not projected. Edges are filled in by interpolation）.
+Perspective projection is in viewing transformation. In order to find this transformation. Find relationship between transformed points (Q) and original points (P). 
+![[Pasted image 20241206000317.png]]
+## Graphics Pipeline
+![[Pasted image 20241206113051.png]]
+To install and use a shader in OpenGL:
+![[Pasted image 20241206144153.png]]
+
+## webgl dataflow
+Graphics primitives include: lines, circles, arcs, rectangles, etc.
+### GLSL
+subset of C++ language, case sensitive, no char/string types. 
+`uniform`: constant across an entire primitive
+`attribute`: VS per vertex information
+`varying`: VS write, FS read qualifier
+`gl_Position`: type=vec4, description=vertex position
+`gl_FragColor`: type=vec4, description=final fragment color
+
+## Texture Mapping
+**Texture** – an image meant for the storage of some information that is later mapped to an object.
+An image mapped to geometry is called a texture.
+
+Textures 
+- represent variations in reflected spectral light over a surface 
+- color patterns that represent 
+	- complex surface geometry 
+	- complex surface composition 
+- Textures add realism to simple geometry
+
+Texturing Surface: 
+![[Pasted image 20241206174648.png]]
+### Backward Mapping
+![[Pasted image 20241206211553.png]]
+
+### 3D Texture Map
+
+
+
+### Interpolation Across Triangle: Barycentric coordinates
+**Interpolation** – process of finding a previously unknown value between a number of known values.
+
+重⼼坐标
+motivation of interpolation:
+- specify values at vertices
+- Obtain smoothly varying values across triangles
+to interpolate, we need:
+- texture coordinates
+- colors
+- normal vectors
+interpolate by barycentric coordinates. 
+
+![[Pasted image 20241206180936.png]]
+
+
+![[Pasted image 20241206181202.png]]
+
+![[Pasted image 20241206181953.png]]
+
+![[Pasted image 20241206182013.png]]
+
+![[Pasted image 20241206182730.png]]
+### Sampling Texture
+very useful references: https://cglearn.eu/pub/computer-graphics/textures-and-sampling
+That is why we would rather have an image mapped to our object and pick the colors from that image. Images can be regarded as mathematical functions and in fact you do not have to use an image, but could just sample some interesting function. We will see those kinds of techniques in the Procedural Generation topic, because those functions are usually generated to produce some random-looking but specific pattern. Here however we will see how can we use just an image (that you can draw in an image editing program for example) as the storage of color information on some object's surface.
+**Sampling** – process of getting a finite number of values from a function, map, image.
+
+Bilinear Interpolation:
+![[Pasted image 20241206224442.png]]Mipmap:
+property utilized: texture images must be a power of 2. 
+![[Pasted image 20241206224923.png]]
