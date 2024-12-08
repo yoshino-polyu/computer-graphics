@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3e40d104f959aafe",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "reading materials/lec06-texturemapping.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "lec06-texturemapping"
-            }
-          },
-          {
             "id": "7ee35c43470d6bec",
             "type": "leaf",
             "state": {
@@ -31,6 +19,18 @@
               },
               "icon": "lucide-file",
               "title": "Viewing"
+            }
+          },
+          {
+            "id": "7708dabbbff19733",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "reading materials/lec09-transformations.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "lec09-transformations"
             }
           }
         ]
@@ -151,10 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "reading materials/lec06-texturemapping.pdf"
+                "file": "Viewing.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of lec06-texturemapping"
+              "title": "Outline of Viewing"
             }
           }
         ],
@@ -174,30 +174,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc5a83c0af26fe03",
+  "active": "7ee35c43470d6bec",
   "lastOpenFiles": [
     "exam/~$_cheet.docx",
+    "reading materials/lec09-transformations.pdf",
+    "Viewing.md",
+    "reading materials/lec08-shading.pdf",
+    "reading materials/lec10-modeling.pdf",
+    "reading materials/lec07-light.pdf",
+    "images/Pasted image 20241207020207.png",
+    "images/Pasted image 20241207020123.png",
+    "reading materials/lec11-visibility.pdf",
+    "reading materials/lec06-texturemapping.pdf",
     "exam/cg_cheet.docx",
     "exam",
     "New folder",
-    "Viewing.md",
-    "reading materials/lec06-texturemapping.pdf",
     "images/Pasted image 20241206224923.png",
     "images/Pasted image 20241206224442.png",
-    "reading materials/lec07-light.pdf",
-    "reading materials/Texture Mapping.pdf",
-    "reading materials/lec05-dataflow.pdf",
-    "reading materials/lec04-shaders.pdf",
     "images/Pasted image 20241206211553.png",
-    "reading materials/lec02-gpu.pdf",
-    "reading materials/lec03-viewing.pdf",
     "images/Pasted image 20241206182730.png",
     "images/Pasted image 20241206182013.png",
     "images/Pasted image 20241206181953.png",
     "images/Pasted image 20241206181202.png",
     "images/Pasted image 20241206180936.png",
-    "images/Pasted image 20241206174648.png",
-    "images/Pasted image 20241206172500.png",
     "README.md",
     "security records.md"
   ]

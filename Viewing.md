@@ -42,6 +42,7 @@ bind points = internal global variables inside WebGL. bind a resource (e.g., pos
 
 
 ## Fragment shader
+main goal: give out a color value for a pixel. 
  - operates on each pixel
  - compute final color of each pixel
  - performs texture lookup
@@ -170,7 +171,6 @@ Texturing Surface:
 ### 3D Texture Map
 
 
-
 ### Interpolation Across Triangle: Barycentric coordinates
 **Interpolation** – process of finding a previously unknown value between a number of known values.
 
@@ -203,3 +203,9 @@ Bilinear Interpolation:
 ![[Pasted image 20241206224442.png]]Mipmap:
 property utilized: texture images must be a power of 2. 
 ![[Pasted image 20241206224923.png]]
+## Lighting
+### Lambert Lighting Model
+![[Pasted image 20241207020123.png]]
+### Phong Lighting Model
+![[Pasted image 20241207020207.png]]
+
